@@ -4,37 +4,37 @@ import java.util.Scanner;
 
 public class Homework_2 {
 	public static void main(String[] args){
-		final double COSTOF_COLOR = 0.10;//Ã¿Ó¢³ßÈ¾É«µÄ¼Û¸ñ
-		final double COSTOF_FRAME = 0.15;//Ã¿Ó¢³ß¿ò¼ÜµÄ¼Û¸ñ
-		final double COSTOF_FANCY = 0.25;//Ã¿Ó¢³ß¾«ÖÂ¿ò¼ÜµÄ¼Û¸ñ
-		final double COSTOF_PAPER = 0.02;//Ã¿Æ½·½Ó¢³ßÊ¹ÓÃÖ½°åµÄ¼Û¸ñ
-		final double COSTOF_GLASS = 0.07;//Ã¿Æ½·½Ó¢³ßÊ¹ÓÃ²£Á§µÄ¼Û¸ñ
-		final double COSTOF_CROWN = 0.35;//Ã¿¸ö½ÇÓÃ»¨×°ÊÎµÄ¼Û¸ñ
+		final double COSTOF_COLOR = 0.10;//æ¯è‹±å°ºæŸ“è‰²çš„ä»·æ ¼
+		final double COSTOF_FRAME = 0.15;//æ¯è‹±å°ºæ¡†æž¶çš„ä»·æ ¼
+		final double COSTOF_FANCY = 0.25;//æ¯è‹±å°ºç²¾è‡´æ¡†æž¶çš„ä»·æ ¼
+		final double COSTOF_PAPER = 0.02;//æ¯å¹³æ–¹è‹±å°ºä½¿ç”¨çº¸æ¿çš„ä»·æ ¼
+		final double COSTOF_GLASS = 0.07;//æ¯å¹³æ–¹è‹±å°ºä½¿ç”¨çŽ»ç’ƒçš„ä»·æ ¼
+		final double COSTOF_CROWN = 0.35;//æ¯ä¸ªè§’ç”¨èŠ±è£…é¥°çš„ä»·æ ¼
 		
-		double Length;//¿ò¼Ü³¤
-		double Width;//¿ò¼Ü¿í
-		int type;//¿ò¼ÜÖÖÀà¡£0±íÊ¾ÆÕÍ¨µÄ£¬1±íÊ¾¾«ÖÂµÄ¡£
-		String FrameColor;//¿ò¼ÜÐèÒªÈ¾µÄÑÕÉ«
-		int Crown;//ÐèÒª»¨µÄÊýÁ¿
+		double Length;//æ¡†æž¶é•¿
+		double Width;//æ¡†æž¶å®½
+		int type;//æ¡†æž¶ç§ç±»ã€‚0è¡¨ç¤ºæ™®é€šçš„ï¼Œ1è¡¨ç¤ºç²¾è‡´çš„ã€‚
+		String FrameColor;//æ¡†æž¶éœ€è¦æŸ“çš„é¢œè‰²
+		int Crown;//éœ€è¦èŠ±çš„æ•°é‡
 		double total;
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("ÊäÈë¿ò¼Ü³¤£º");
+		System.out.println("è¾“å…¥æ¡†æž¶é•¿ï¼š");
 		Length = scan.nextDouble();
-		System.out.println("ÊäÈë¿ò¼Ü¿í£º");
+		System.out.println("è¾“å…¥æ¡†æž¶å®½ï¼š");
 		Width = scan.nextDouble();
-		System.out.println("ÊäÈë¿ò¼ÜÖÖÀà(0±íÊ¾ÆÕÍ¨£¬1±íÊ¾¾«ÖÂ)£º");
+		System.out.println("è¾“å…¥æ¡†æž¶ç§ç±»(0è¡¨ç¤ºæ™®é€šï¼Œ1è¡¨ç¤ºç²¾è‡´)ï¼š");
 		type = scan.nextInt();
-		System.out.println("ÊäÈë»¨µÄÊýÁ¿(>=0&&<=4)£º");
+		System.out.println("è¾“å…¥èŠ±çš„æ•°é‡(>=0&&<=4)ï¼š");
 		Crown = scan.nextInt();
 		scan.nextLine();
-		System.out.println("ÊäÈëÐèÒªÈ¾µÄÑÕÉ«£º");
+		System.out.println("è¾“å…¥éœ€è¦æŸ“çš„é¢œè‰²ï¼š");
 		FrameColor = scan.next();
 		if(type == 0){
-			total = (Length+Width)*(COSTOF_FRAME+COSTOF_COLOR)+Length*Width*(COSTOF_PAPER+COSTOF_GLASS)+COSTOF_CROWN*Crown;
+			total = 2*(Length+Width)*(COSTOF_FRAME+COSTOF_COLOR)+Length*Width*(COSTOF_PAPER+COSTOF_GLASS)+COSTOF_CROWN*Crown;
 		}else
-			total = (Length+Width)*(COSTOF_FANCY+COSTOF_COLOR)+Length*Width*(COSTOF_PAPER+COSTOF_GLASS)+COSTOF_CROWN*Crown;
-		System.out.println("ÖÆ×÷¼Û¸ñÎª£º"+total);
+			total = 2*(Length+Width)*(COSTOF_FANCY+COSTOF_COLOR)+Length*Width*(COSTOF_PAPER+COSTOF_GLASS)+COSTOF_CROWN*Crown;
+		System.out.println("åˆ¶ä½œä»·æ ¼ä¸ºï¼š"+total);
 
 	}
 
