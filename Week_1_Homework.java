@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Week_1_Homework {
 	public static void main(String[] args){
 		Scanner scan = new Scanner(System.in);
-		// ¶¨Òå
+		// å®šä¹‰
 		final int COINS100 = 100;
 		final int COINS50 = 50;
 		final int COINS20 = 20;
@@ -23,10 +23,11 @@ public class Week_1_Homework {
 		int numberOf2;
 		int numberOf1;
 
-		// ÊäÈë
-		System.out.println("ÇëÊäÈëÃÀÔªÊı£¨µ¥Î»£ºÃÀ·Ö£©");
+		// è¾“å…¥
+		System.out.println("è¯·è¾“å…¥ç¾å…ƒæ•°ï¼ˆå•ä½ï¼šç¾å…ƒï¼‰");
 		numberOfCoins = scan.nextInt();
-		// ¼ÆËã
+		numberOfCoins = numberOfCoins *10;
+		// è®¡ç®—
 		numberOf100 = numberOfCoins / COINS100;
 		leftoverCoins = numberOfCoins % COINS100;
 		numberOf50 = leftoverCoins / COINS50;
@@ -42,14 +43,14 @@ public class Week_1_Homework {
 		numberOf1 = leftoverCoins / COINS1;
 		leftoverCoins = leftoverCoins % COINS1;
 
-		// Êä³ö
-		System.out.println("¿ÉÒÔ»»" + numberOf100 + "ÃÀÔª");
-		System.out.println(numberOf50 + "ÕÅ50ÃÀ·Ö");
-		System.out.println(numberOf20 + "ÕÅ20ÃÀ·Ö");
-		System.out.println(numberOf10 + "ÕÅ10ÃÀ·Ö");
-		System.out.println(numberOf5 + "ÕÅ5ÃÀ·Ö");
-		System.out.println(numberOf2 + "ÕÅ2ÃÀ·Ö");
-		System.out.println(numberOf1 + "ÕÅ1ÃÀ·Ö");
+		// è¾“å‡º
+		System.out.println("å¯ä»¥æ¢" + numberOf100 + "ç¾å…ƒ");
+		System.out.println(numberOf50 + "å¼ 50ç¾åˆ†");
+		System.out.println(numberOf20 + "å¼ 20ç¾åˆ†");
+		System.out.println(numberOf10 + "å¼ 10ç¾åˆ†");
+		System.out.println(numberOf5 + "å¼ 5ç¾åˆ†");
+		System.out.println(numberOf2 + "å¼ 2ç¾åˆ†");
+		System.out.println(numberOf1 + "å¼ 1ç¾åˆ†");
 	}
 
 }
