@@ -5,13 +5,13 @@ public class Week4_Student {
 	private String phoNum;
 	private String stuNum;
 
-	public Week4_Student(){	
+	public Week4_Student() {
 		this.name = "null";
 		this.phoNum = "666";
 		this.stuNum = "666";
 	}
 
-	public Week4_Student(String name,String phoNum,String stuNum){
+	public Week4_Student(String name, String phoNum, String stuNum) {
 		this.name = name;
 		this.phoNum = phoNum;
 		this.stuNum = stuNum;
@@ -25,8 +25,22 @@ public class Week4_Student {
 
 	public void displayStudent() {
 		String info = "";
-		info = "Ñ§ÉúĞÕÃû£º" + this.name + "    Ñ§Éúµç»°£º" + this.phoNum + "    Ñ§ÉúÑ§ºÅ£º" + this.stuNum;
+		info = "å­¦ç”Ÿå§“åï¼š" + this.name + "    å­¦ç”Ÿç”µè¯ï¼š" + this.phoNum + "    å­¦ç”Ÿå­¦å·ï¼š" + this.stuNum;
 		System.out.println(info);
 	}
 
+	public static void main(String[] args) {
+
+		Week4_Student a = new Week4_Student();
+		Week4_Student b = new Week4_Student();
+		Week4_Student c = new Week4_Student();
+
+		a.getMessage("lvhao", "1598795414", "1904240721");
+		b.getMessage("xiaobang", "15982865741", "1907240212");
+		c.getMessage("JJ", "1567894545", "1902210524");
+		a.displayStudent();
+		b.displayStudent();
+		c.displayStudent();
+
+	}
 }
