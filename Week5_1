@@ -1,0 +1,146 @@
+package Project;
+
+import java.util.Scanner;
+
+class first {
+	public static void main(String[] args) {
+		//键盘输入相关的信息
+		Scanner scan = new Scanner(System.in);
+		System.out.println("请输入项目名称");
+		String projectName = scan.next();
+		System.out.println("请输入项目的预算");
+		double budget = scan.nextDouble();
+		
+		System.out.println("请输入项目员工1的姓名");
+		String emp1Name = scan.next();
+		System.out.println("请输入员工1部门");
+		String emp1department = scan.next();
+		System.out.println("请输入员工1薪水");
+		double emp1budget = scan.nextDouble();
+		
+	System.out.println("请输入项目员工2的姓名");
+		String emp2Name = scan.next();
+		System.out.println("请输入员工2部门");
+		String emp2department = scan.next();
+		System.out.println("请输入员工2薪水");
+		double emp2budget = scan.nextDouble();
+		
+		Employee emp1 = new Employee(emp1department,emp1Name,emp1budget);
+		Employee emp2 = new Employee(emp2department,emp2Name,emp2budget);
+		
+		project project = new project(projectName,budget,emp1,emp2);
+		project.updateBudget();
+    
+		System.out.println("新预算为="+project.getBudget());
+		System.out.println(project.toString());
+	}
+}
+
+
+package Project;
+
+public class Employee {
+
+	private String department;
+	private String name;
+	private double baseSalary;
+	
+	public Employee(){
+		
+	}
+	
+	public Employee(String department,String name,double baseSalary){
+		this.department = department;
+		this.name = name;
+		this.baseSalary = baseSalary;
+	}
+	
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+	public String toString() {
+		return "Employee [department=" + department + ", name=" + name + ", baseSalary=" + baseSalary + "]";
+	}
+}
+
+
+package Project;
+
+class project {
+	private String projectName;
+	private double budget;
+	private Employee emp1;
+	private Employee emp2;
+	
+	public project(){
+		
+	}
+	
+	public project(String projectName,double budget,Employee emp1,Employee emp2){
+		this.projectName = projectName;
+		this.budget = budget;
+		this.emp1 = emp1;
+		this.emp2 = emp2;
+	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public double getBudget() {
+		return budget;
+	}
+
+	public void setBudget(double budget) {
+		this.budget = budget;
+	}
+
+	public Employee getEmp1() {
+		return emp1;
+	}
+
+	public void setEmp1(Employee emp1) {
+		this.emp1 = emp1;
+	}
+
+	public Employee getEmp2() {
+		return emp2;
+	}
+
+	public void setEmp2(Employee emp2) {
+		this.emp2 = emp2;
+	}
+	
+	public void updateBudget(){
+		this.budget = this.budget * (1+0.2);
+		//this.getBudget(this.getBudget()*(1+0.2));
+	}
+	
+	public String toString(){
+		String info = "";
+		info = "projectName="+this.projectName+"budget="+this.budget+"\n"
+				+"emp1="+this.emp1.toString()+"\n"+"emp2="+this.emp2.toString();
+		return info;
+	}
+
+}
+
